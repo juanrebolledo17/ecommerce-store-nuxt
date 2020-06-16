@@ -1,72 +1,40 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        ecommerce-store-nuxt
-      </h1>
-      <h2 class="subtitle">
-        Ecommerce store build with nuxtjs and netlify
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div>
+    <app-textlockup />
+    <app-sales-boxes />
+    <app-textlockup>
+    	<template v-slot:img>
+    		<img src="/bag.jpg" alt="bag">
+    	</template>
+    	<template v-slot:new>50%</template>
+    	<template v-slot:sale>Storewide Sale</template>
+    	<template v-slot:collection>Summer</template>
+    	<template v-slot:details>All accessories</template>
+    </app-textlockup>
+    <app-featured-products />
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import AppTextlockup from "~/components/AppTextlockup.vue"
+import AppSalesBoxes from "~/components/AppSalesBoxes.vue"
+import AppFeaturedProducts from "~/components/AppFeaturedProducts.vue"
 
 export default {
   components: {
-    Logo
+    AppTextlockup,
+    AppSalesBoxes,
+    AppFeaturedProducts
   }
-}
+};
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.test {
+	margin: 3vh;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+main {
+  width: 75vw;
 }
 </style>
