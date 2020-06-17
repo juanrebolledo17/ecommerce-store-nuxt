@@ -1,6 +1,13 @@
+import data from './static/storedata.json'
+
+let dynamicRoutes = () => {
+  return new Promise(resolve => {
+    resolve(data.map(el => `product/${el.id}`))
+  })
+}
 
 export default {
-  mode: 'spa',
+  mode: 'universal',
   /*
   ** Headers of the page
   */
@@ -13,7 +20,16 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    link: [
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Montserrat:300,600|PT+Serif&display=swap'
+      }
+    ],
+  },
+  generate: {
+    routes: dynamicRoutes
   },
   /*
   ** Customize the progress-bar color
@@ -22,13 +38,11 @@ export default {
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: ['normalize.css', { src: '~/assets/main.scss', lang: 'sass'}],
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: [`~/plugins/currency-filter.js`],
   /*
   ** Nuxt.js dev-modules
   */

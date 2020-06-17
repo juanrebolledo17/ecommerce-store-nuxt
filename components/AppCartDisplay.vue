@@ -84,7 +84,7 @@ export default {
   },
   computed: {
   	...mapState(['cart']),
-  	...mapGetter(['cartCount', 'cartTotal']),
+  	...mapGetters(['cartCount', 'cartTotal']),
   }
 };
 </script>

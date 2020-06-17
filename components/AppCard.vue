@@ -15,14 +15,14 @@
 				class="stripe-card"
 				id="card"
 				:class="{ complete }"
-				stripe="pk_test_"
+				stripe="pk_test_5ThYi0UvX3xwoNdgxxxTxxrG"
 				:options="stripeOptions"
 				@change="complete = $event.complete"
 			/>
 			<button
-			class="pay-with-stripe button"
-			@click="pay"
-			:disabled="!complete || !stripeEmail"
+				class="pay-with-stripe button"
+				@click="pay"
+				:disabled="!complete || !stripeEmail"
 			>
 				Pay with credit card
 			</button>
@@ -48,12 +48,12 @@
 </template>
 
 <script>
-import { Cart, createToken } from 'vue-stripe-elements-plus'
+import { Card, createToken } from 'vue-stripe-elements-plus'
 
 import { mapState } from 'vuex'
 
 export default {
-	components: { Cart },
+	components: { Card },
 	computed: {
 		...mapState(["cartUIStatus"])
 	},

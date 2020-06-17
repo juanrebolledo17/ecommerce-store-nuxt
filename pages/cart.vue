@@ -4,7 +4,7 @@
 		<hr />
 		<h1 class="center">Your Cart</h1>
 
-		<section v-if="cartUIstatus === 'idle'">
+		<section v-if="cartUIStatus === 'idle'">
 			<app-cart-display />
 		</section>
 

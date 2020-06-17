@@ -9,17 +9,17 @@
 					</nuxt-link>
 				</li>
 				<li>
-					<nuxt-link exact to="/all">
+					<nuxt-link to="/all">
 						All
 					</nuxt-link>
 				</li>
 				<li>
-					<nuxt-link exact to="/women">
+					<nuxt-link to="/women">
 						Women
 					</nuxt-link>
 				</li>
 				<li>
-					<nuxt-link exact to="/men">
+					<nuxt-link to="/men">
 						Men
 					</nuxt-link>
 				</li>
@@ -84,6 +84,7 @@ nav ul li {
 
 nav ul li a {
 	color: black;
+	text-decoration: none;
 }
 
 nav ul li a:hover {
