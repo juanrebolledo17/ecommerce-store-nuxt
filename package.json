@@ -13,7 +13,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
-    "gsap": "^3.3.1",
+    "gsap": "^3.6.0",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.0.0",
